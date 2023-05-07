@@ -1,7 +1,9 @@
 const inputEl = document.querySelector('#font-size-control');
 const spanEl = document.querySelector('#text')
 
-inputEl.addEventListener('input', onInputElTextSizeChange);
-function onInputElTextSizeChange(event) {
-    spanEl.style.fontSize = event.target.value.max
+inputEl.addEventListener('input', onInputElFontSizeChange);
+function onInputElFontSizeChange() {
+    const currentFontSize = Number(inputEl.value);
+    spanEl.style.fontSize = `${currentFontSize}px`;
 }
+
